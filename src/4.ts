@@ -36,10 +36,7 @@ class MyHouse extends House {
   OpenDoor(key: Key) {
     if (key === this.key) {
       this.door = true;
-      console.log("door is open");
-    } else {
-      console.log("key not found");
-    }
+    } 
   }
 }
 
