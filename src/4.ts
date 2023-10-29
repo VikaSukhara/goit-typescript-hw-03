@@ -3,7 +3,7 @@ class Key {
   constructor() {
     this.signature = Math.random();
   }
-  getSignature(a: number): number {
+  getSignature(): number {
     return this.signature;
   }
 }
@@ -30,12 +30,9 @@ abstract class House {
 }
 
 class MyHouse extends House {
-    constructor(key: Key) {
-        super();
-      }
   OpenDoor(key: Key) {
-    if (key === this.key) {
-      this.door = true;
+    if (key.getSignature() === this.key.getSignature()) {
+      this.door === true;
     } 
   }
 }
