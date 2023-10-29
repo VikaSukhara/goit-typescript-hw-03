@@ -25,13 +25,13 @@ abstract class House {
   protected tenants: Person[] = [];
 
     constructor(key: Key) {
-      console.log("HOUSE")
-    this.key = key;
-  }
+      console.log("HOUSE", key)
+      this.key = key;
+    }
 
 
   comeIn(person: Person) {
-    if ((this.door = true)) {
+    if ((this.door === true)) {
       this.tenants.push(person);
       console.log(`Hi, i am tenant. My name ${this.tenants[0]}`)
     } 
